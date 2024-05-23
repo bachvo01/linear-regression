@@ -1,68 +1,73 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* CSS Reset */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* Box sizing rules */
+html {
+  box-sizing: border-box;
+  }
+  *, *:before, *:after {
+  box-sizing: inherit;
+  }
+  
+  /* Remove default margin */
+  body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li, dd, dt, blockquote, figure, fieldset, form, legend, textarea, pre, iframe, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section, menu, figure, figcaption {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  padding: 0;
+  }
+  
+  /* Remove default list styles */
+  ul, ol {
+  /* list-style: none; */
+  }
+  
+  /* Remove default font */
+  body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  }
+  
+  /* Remove default hyperlink styles */
+  a {
+  text-decoration: none;
+  color: inherit;
+  }
+  
+  /* Remove default button styles */
+  button, input, optgroup, select, textarea {
+  margin: 0;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  font-size: inherit;
+  line-height: inherit;
+  }
+  
+  /* Remove default button styling in Firefox */
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  }
+  
+  /* Remove default border */
+  img, embed, iframe, object, video {
+  border: 0;
+  }
+  
+  /* Remove default horizontal rule styles */
+  hr {
+  box-sizing: content-box;
+  height: 0;
+  }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
-  a:hover {
-    color: #747bff;
+  
+  /* Remove default overflow behavior */
+  html, body {
+  overflow: visible;
+  background-color: #0B121F;
   }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+  
+  /* Additional resets if needed */
