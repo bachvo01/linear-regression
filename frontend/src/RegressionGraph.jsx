@@ -3,7 +3,7 @@ import Papa from 'papaparse'
 import { Chart, Line, Scatter } from 'react-chartjs-2';
 import { Chart as ChartJS, LinearScale, PointElement, LineElement, Tooltip, Legend, plugins } from 'chart.js';
 import csv from './assets/data/Salary_Data.csv'
-
+import './graph.scss'
 
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
@@ -71,7 +71,6 @@ function RegressionGraph() {
         }
     };
 
-
     const chartData = {
         datasets: [
           {
@@ -94,7 +93,6 @@ function RegressionGraph() {
       const options = {
         respnsive: true,
         plugins: {
-            customCanvasBackgroundColor: backgroundPlugin,
             legend: {
                 position: 'top',
                 labels: {
@@ -117,6 +115,11 @@ function RegressionGraph() {
             },
             ticks: {
                 color: '#A4B1CD'
+            },
+            grid: {
+              display: true,
+              drawOnChartArea: true,
+              drawTicks: true,
             }
           },
           y: {
