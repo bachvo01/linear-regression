@@ -71,7 +71,7 @@ function App() {
               - Regression Line: Adding the regression line to the scatter plot, which represents the predicted salary values for given years of experience.</p>
             <div className='sep-l'></div>
             <div className='sep-l'></div>
-            <RegressionGraph></RegressionGraph>
+            {/* <RegressionGraph></RegressionGraph> */}
           </div>
         </div>
         
