@@ -34,6 +34,20 @@ function App() {
         </div>
         <div className='sep-l'></div>
         <div className='article-container'>
+        <div className='demo-section'>
+            {/* <h1 className='monospace-header-m'>Demonstration</h1> */}
+            {/* <div className='sep-s'></div> */}
+            <form className='demo-container' onSubmit={handleSubmit}>
+                <div className='row'>
+                    <label className='monospace-regular-p'>Years of Experience</label>
+                    <input type='number' value={yoe} className='monospace-regular-p' onChange={((e) => setYoE(e.target.value))}></input>
+                </div>
+                {
+                  salary && <h2 className='monospace-regular-p'>Your predicted salary would be <span className='monospace-regular'>${Math.round(salary * 100) / 100}</span></h2>
+                }
+                <button className='monospace-regular-p' type='submit'>Predict salary</button>
+            </form>
+          </div>
           <div className='overview-section'>
             <h1 className='monospace-header-m'>Overview</h1>
             <div className='sep-s'></div>
@@ -47,21 +61,6 @@ function App() {
             <h1 className='monospace-header-m'>Dataset</h1>
             <div className='sep-s'></div>
             <p className='monospace-regular-p'>The project will utilize a dataset containing information about various factors that influence job salary, such as age, gender, education level, job title and especially years of experience. The dataset will be sourced from publicly available data sources (<a className='link' href='https://www.kaggle.com/datasets/mohithsairamreddy/salary-data'>Kaggle</a>).</p>
-          </div>
-          
-          <div className='demo-section'>
-            <h1 className='monospace-header-m'>Demonstration</h1>
-            <div className='sep-s'></div>
-            <form className='demo-container' onSubmit={handleSubmit}>
-                <div className='row'>
-                    <label className='monospace-regular-p'>Years of Experience</label>
-                    <input type='number' value={yoe} className='monospace-regular-p' onChange={((e) => setYoE(e.target.value))}></input>
-                </div>
-                {
-                  salary && <h2 className='monospace-regular-p'>Your predicted salary would be <span className='monospace-regular'>${Math.round(salary * 100) / 100}</span></h2>
-                }
-                <button className='monospace-regular-p' type='submit'>Predict salary</button>
-            </form>
           </div>
 
           <div className='overview-section'>

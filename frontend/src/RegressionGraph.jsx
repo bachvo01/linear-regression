@@ -58,13 +58,14 @@ function RegressionGraph() {
         }));
         setRegressionLine(regressionLine);
     }
+
     // Plugin to customize background
     const backgroundPlugin = {
         id: 'customCanvasBackgroundColor',
         beforeDraw: (chart) => {
             const { ctx, width, height } = chart;
             ctx.save();
-            ctx.fillStyle = '#3868A9'; // Set your desired background color here
+            ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, width, height);
             ctx.restore();
         }

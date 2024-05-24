@@ -30,7 +30,7 @@ def predict():
     data = request.get_json(force=True)
     years_of_experience = np.array([[data['years_of_experience']]])
     prediction = model.predict(years_of_experience)
-    print(years_of_experience)
+    print(prediction)
     return jsonify({'predicted_salary' : prediction[0]})
 
 if __name__ == '__main__':

@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./frontend/src:/container-frontend-app/src
+      - ./frontend/package-lock.json:/container-frontend-app/package-lock.json
+      - ./frontend/package.json:/container-frontend-app/package.json
+      - ./frontend/index.html:/container-frontend-app/index.html
+      - /frontend/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    container_name: frontend-container
