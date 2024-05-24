@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Papa from 'papaparse'
-import { Chart, Line, Scatter } from 'react-chartjs-2';
+import { Scatter } from 'react-chartjs-2';
 import { Chart as ChartJS, LinearScale, PointElement, LineElement, Tooltip, Legend, plugins } from 'chart.js';
 import csv from '/data/Salary_Data.csv'
 import './graph.scss'
