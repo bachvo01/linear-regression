@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Papa from 'papaparse'
 import { Scatter } from 'react-chartjs-2';
-import { Chart as ChartJS, LinearScale, PointElement, LineElement, Tooltip, Legend, plugins } from 'chart.js';
+import Chart from 'chart.js/auto';
 import csv from '/data/Salary_Data.csv'
 import './graph.scss'
-
-ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 
 function RegressionGraph() {
