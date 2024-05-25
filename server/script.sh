@@ -1,6 +1,12 @@
 #!/bin/bash
 source myenv/bin/activate
-python server.py
-# pip list
+
+pip install -r requirements.txt
+
+pip install virtualenv
+
 pip freeze > requirements.txt
-# deactivate
+
+python server.py -m flask run --host=0.0.0.0
+
+deactivate
