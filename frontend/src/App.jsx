@@ -9,14 +9,14 @@ function App() {
   const [yoe, setYoE] = useState(0);
   const [salary, setSalary] = useState(null);
   
-  console.log(serverURL);
+  // console.log(serverURL);
   const handleSubmit = async (e) =>{
     e.preventDefault()
     try {
       const response = await axios.post(`${serverURL}/predict`, {
         years_of_experience : parseFloat(yoe),
       });
-      setSalary(response.data.predicted_salary)
+      setSalary(response.data.predicted_salary / 2)
     } catch (error) {
       console.error('Error...!', error);
     }
@@ -45,7 +45,7 @@ function App() {
                     <input type='number' value={yoe} className='monospace-regular-p' onChange={((e) => setYoE(e.target.value))}></input>
                 </div>
                 {
-                  salary && <h2 className='monospace-regular-p'>Your predicted salary would be <span className='monospace-regular'>${Math.round(salary * 100) / 100}</span></h2>
+                  salary && <h2 className='monospace-regular-p'>Your predicted salary would be <br></br> <span className='monospace-regular'>${Math.round(salary * 100) / 100}</span></h2>
                 }
                 <button className='monospace-regular-p' type='submit'>Predict salary</button>
             </form>
@@ -60,9 +60,24 @@ function App() {
           </div>
 
           <div className='overview-section'>
+            <h1 className='monospace-header-m'>Outcomes</h1>
+            <div className='sep-s'></div>
+            <p className='monospace-regular-p'>The main idea behind this project is to get myself familiar with some technologies I learned long ago but have not been able to 
+            get hands-on experience on them. <br></br><br></br> Some of the highlights are: <br></br>
+            - Fostering Microservices architecture. <br></br>
+            - Getting to know backend development using Python and Flask. <br></br>
+            - Automating task with some Linux Shell Scripting. <br></br>
+            - Faciliating containerization with Docker. <br></br>
+            - Utilizing Linear Regression to train the model. 
+            </p>
+          </div>
+
+          <div className='overview-section'>
             <h1 className='monospace-header-m'>Dataset</h1>
             <div className='sep-s'></div>
-            <p className='monospace-regular-p'>The project will utilize a dataset containing information about various factors that influence job salary, such as age, gender, education level, job title and especially years of experience. The dataset will be sourced from publicly available data sources (<a className='link' href='https://www.kaggle.com/datasets/mohithsairamreddy/salary-data'>Kaggle</a>).</p>
+            <p className='monospace-regular-p'>The project will utilize a dataset containing information about various factors that influence job salary, such as age, gender, education level, job title and especially years of experience. The dataset will be sourced from publicly available data sources (<a className='link' href='https://www.kaggle.com/datasets/mohithsairamreddy/salary-data'>Kaggle</a>). <br></br><br></br>
+            In this project, I chose to reduce the predicted salary by two to have a more grounded salary in the current market due to the inflation of income.
+            </p>
           </div>
 
           <div className='overview-section'>
@@ -76,8 +91,10 @@ function App() {
             <RegressionGraph></RegressionGraph>
           </div>
         </div>
-        
       </div>
+      <div className='footer-container'>
+          <h1 className='monospace-regular'>Built by <a href='https://github.com/bachvo01' target='blank' rel='noopener noreferrer'>Bachiro</a> | <a href='https://github.com/bachvo01/linear-regression' target='blank' rel='noopener noreferrer'>Source code</a></h1>
+        </div>
     </div>
   )
 }
