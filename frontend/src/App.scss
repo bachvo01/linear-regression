@@ -169,7 +169,9 @@
         .demo-section{
           .demo-container{
             width: 100%;
-
+            h2{
+              text-align: center;
+            }
             .row{
               flex-direction: column;
               row-gap: 20px;
