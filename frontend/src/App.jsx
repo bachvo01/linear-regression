@@ -29,7 +29,7 @@ function App() {
     <div className='home-container'>
       <div className='home-inner'>
         <div className='header-wrapper'>
-          <h1 className='header monospace-header'>Linear Regression Model</h1>
+          <h1 className='monospace-header'>Linear Regression Model</h1>
           <div className='info-container'>
             <h2 className='info monospace-regular'>May 24, 2024. By Bach Vo</h2>
           </div>
@@ -72,7 +72,7 @@ function App() {
               <br></br>- Scatter Plot: Plotting the original data points with years of experience on the x-axis and salary on the y-axis. <br></br>
               - Regression Line: Adding the regression line to the scatter plot, which represents the predicted salary values for given years of experience.</p>
             <div className='sep-l'></div>
-            <div className='sep-l'></div>
+            {/* <div className='sep-l'></div> */}
             <RegressionGraph></RegressionGraph>
           </div>
         </div>
