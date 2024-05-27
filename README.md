@@ -4,9 +4,8 @@ An application utilizing **Linear Regression** - a statistical method, to predic
 - Introduction
 - Purpose
 - About 
-- Getting Started
-  - Prequisites
-  - Installation
+  - Architecture
+  - Directory Structure
   - Usage
 
 
