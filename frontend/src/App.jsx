@@ -3,7 +3,7 @@ import axios from 'axios'
 import './App.scss'
 import RegressionGraph from './RegressionGraph';
 
-const serverURL = import.meta.env.VITE_BACKEND_URL
+const serverURL = import.meta.env.VITE_BACKEND_FLY_URL
 
 function App() {
   const [yoe, setYoE] = useState(0);
@@ -16,7 +16,7 @@ function App() {
       const response = await axios.post(`${serverURL}/predict`, {
         years_of_experience : parseFloat(yoe),
       });
-      setSalary(response.data.predicted_salary / 2)
+      setSalary(response.data.predicted_salary)
     } catch (error) {
       console.error('Error...!', error);
     }
