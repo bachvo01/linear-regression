@@ -6,6 +6,8 @@ COPY requirements.txt requirements.txt
 
 COPY . .
 
+RUN chmod +x script.sh
+
 SHELL [ "/bin/bash", "-c" ]
 
 RUN python -m venv myenv
