@@ -3,7 +3,7 @@ import axios from 'axios'
 import './App.scss'
 import RegressionGraph from './RegressionGraph';
 
-const serverURL = import.meta.env.VITE_BACKEND_FLY_URL
+const serverURL = import.meta.env.VITE_BACKEND_URL
 
 function App() {
   const [yoe, setYoE] = useState(0);
